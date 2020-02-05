@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'about', to: 'page#about'
 
   resources :articles
+  #includes all routes for articles
 
 
 end
