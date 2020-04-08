@@ -1,5 +1,13 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+.navbar{
+  background-color: black !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
 #logo {
   float: left;
   font-size: 1.7em;
@@ -9,71 +17,28 @@
   font-weight: bold;
 }
 
-#logo:hover{
-  color: #fff;
-  text-decoration: none;
+#home-container {
+  margin-top: 25px;
 }
 
-.center{
-  text-align: center;
-}
-
-.jumbotron{
-  background-image: asset-url('rubyrails.jpeg');
+.jumbotron {
+  background-image: asset-url('alphablog.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
-  height: 550px;
-  width: 1300px;
+  height: 425px;
 }
 
-.jumbotron h1{
-  color: #fff;
-  text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: -1px;
-  font-weight: bold;
+html,
+body {
+  height: 100%;
 }
 
-.btn-xlarge{
-  font-size: 1.7em;
-  background-color: #660000;
-}
-.article-actions{
-  border-top: 1px solid #eaeaea;
-  padding-top: 5px;
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
 }
 
-.article-title{
-  font-weight: bold;
-  font-size: 1.5em;
-}
-
-.article-body{
-  border-top: 1px solid #eaeaea;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-footer{
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
-
-footer a:hover{
-  color: #222;
-}
-
-footer small{
-  float: left;
-}
-
-footer ul{
-  float: right;
-  list-style: none;
-}
-
-footer ul li{
-  float: left;
-  margin-left: 15px;
+#sticky-footer {
+  flex-shrink: none;
 }

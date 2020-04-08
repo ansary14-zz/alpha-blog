@@ -1,11 +1,21 @@
-<h2 align="center"> Title: <%= @article.title %></h2>
-<div class="well col-xs-8 col-xs-offset-2">
-  <h4 class="center description"><strong>Description:</strong></h4>
-  <hr>
-  <%= simple_format(@article.description) %>
-  <div class="article-actions">
-    <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary"%>
-    <%= link_to "Delete this article", article_path(@article), method: :delete,data: {confirm: "Are you sure for delete the article?"},class: "btn btn-xs btn-danger"%>
-    <%= link_to "View all articles", articles_path, class: "btn btn-xs btn-success"%>
+<h2 class="text-center mt-4"><%= @article.title %></h2>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-8 mt-4">
+      <div class="card text-center shadow mb-5 bg-white rounded">
+        <div class="card-header font-italic">
+          by Ayub Ansary
+        </div>
+        <div class="card-body">
+          <div class="card-text text-left"><%= simple_format(@article.description) %></div>
+            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
+            <%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+          </div>
+          <div class="card-footer text-muted">
+            <small>Created <%= time_ago_in_words(@article.created_at) %> ago,
+            edited <%= time_ago_in_words(@article.updated_at) %> ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
